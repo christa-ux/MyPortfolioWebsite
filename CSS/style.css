@@ -7,6 +7,12 @@ body {
 font-family: monospace;
 }
 
+.text-center {
+    margin-bottom: -30px;
+}
+.fs-6 {
+    margin-bottom: -1.5px;
+}
 .nav-link {
     text-align: center;
 }
@@ -42,3 +48,5 @@ font-family: monospace;
     flex: 1 1 auto;
     padding: 0 0 0 1rem;
 }
+
+
