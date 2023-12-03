@@ -1,4 +1,5 @@
-# MyPortfolioWebsite
+## Description
 Hi ! 
-I am developing my personal website, mainly using HTML5, CSS3, and Bootstrap5. 
-The goal behind this website is not only to describe myself professionally and showcase my skills, but also to have fun designing it and make it my second home. 
+In this repository I am building my personal website. 
+It is a mix between a portfolio and a resume.
+Web developing is one of my favorite hobbies where I can showcase my skills while working my creativity.
