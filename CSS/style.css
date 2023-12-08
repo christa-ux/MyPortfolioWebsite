@@ -1,26 +1,56 @@
 /*@font-face {
     font-family: 'alvater';
     src: url('alvater-font/misc/ALVATER Regular-b14e') format('woff');
-}
+}*/
 
 body {
-    font-family: 'alvater', sans-serif;
-}*/
+    font-family: 'Roboto Mono', monospace;
+}
+
 
 
 img {
 max-width:100%;
 height: auto;
 }
+
 a {
     transition:0.5s;
 }
+
 .pixelIcon {
     height: 100%;
     width:60%;
 }
+
 .navbar {
-    height:50px;
+    height:55px;
+}
+
+@media (max-width: 769px) {
+    .navbar-brand {
+        margin-left: 10px;
+        left: 0;
+        top: 50%;
+        position: absolute;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        
+    }
+    .navbar-toggler {
+        position: fixed;
+        right: 0; 
+        margin-top: 0;
+        margin-right: 10px;
+       
+    }
+    .navbar-collapse {
+        
+        top: 10%; /* Adjust the top value as needed */
+     
+       
+    }
+    
 }
 @media (max-width:285px) {
     .pixelIcon {
