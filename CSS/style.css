@@ -1,0 +1,29 @@
+/*@font-face {
+    font-family: 'alvater';
+    src: url('alvater-font/misc/ALVATER Regular-b14e') format('woff');
+}
+
+body {
+    font-family: 'alvater', sans-serif;
+}*/
+
+
+img {
+max-width:100%;
+height: auto;
+}
+a {
+    transition:0.5s;
+}
+.pixelIcon {
+    height: 100%;
+    width:60%;
+}
+.navbar {
+    height:50px;
+}
+@media (max-width:285px) {
+    .pixelIcon {
+        visibility:hidden;
+    }
+}
