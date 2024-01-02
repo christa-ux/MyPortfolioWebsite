@@ -1,3 +1,10 @@
+<!--Fix contact page (make it look good on all screens)-->
+<!--Fix footer: 
+  -make it look good on all screens 
+  -put icons in the center
+  -place it at the end of contact form)-->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,72 +22,44 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;500;700&family=Rubik:wght@400;700;900&display=swap" rel="stylesheet"> 
 
     <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/41066e6e82.js" crossorigin="anonymous"></script>
 
-    
+
     <!-- CSS Files-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="CSS/style.css">
 
 
+    <title> Christa Abou Arraj </title>
 
-    <title> Christa's Personal Website </title>
+    <script src="js/main.js" defer></script>
 </head>
 
 
 <body>
 
+
 <!--Navbar-->
+<div id="headerContainer"></div>
 
-<nav class="navbar navbar-dark navbar-expand-md bg-dark fixed-top ">
-    <div class="container-fluid">
-
-        <!--Pixel Icon-->
-       <span class="navbar-brand">
-        <a  href="https://icons8.com/icon/zR14PQPuMaLS/pixel-heart"></a> <a href="https://icons8.com"></a>
-            <img class="m-1 pixelIcon" width="50" height="50" src="https://img.icons8.com/water-color/50/pixel-heart.png" alt="pixel-heart"/>
-       </span>
-            
-       <!--Navbar Items-->
-     <!--  <a class="navbar-brand" href="#">Christa</a>-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse bg-dark" id="navbarNav">
-        <ul class="navbar-nav">
-            
-          <li class="nav-item">
-            <a class="nav-link" href="#">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Education</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Volunteering</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-
-
- 
 
 <!-- About-->
-<section id="about" class="py-2">
+<section id="about">
 <div class="container text-center">
     <div class="row">
-        <div class="col-md-5" style="margin-top:20px;">
-            <img src="images/HeaderPicture.png" class=" img-fluid rounded  mx-auto d-block" alt="header picture" style="width:70%;">
+      <!--Image-->
+        <div class="col-md-5">
+            <img src="images/HeaderPicture.png" class=" img-fluid mx-auto d-block" 
+            alt="header picture" style="width:70%;">
         </div>
-        <div class="col-md-7 align-self-center" style="margin-top:20px;">
+        <!--Buttons-->
+        <div id="aboutButtons" class="col-md-7 align-self-center" style="margin-top:20px;">
             <h1 style="font-weight: bold;">Hello World!</h1>
-            <p> My name is Christa and I'm a software Engineering student</p>
-            <a href="#" class="btn px-3" style="background-color: palevioletred;"><i class="bi bi-download"></i> My Resume</a>
-       <a href="#" class="btn " style="background-color: palevioletred;">Contact Information</a>
+            <p style="font-size: 18px;" id="aboutIntro"> I'm Christa, Software Engineering student</p>
+            <a href="Resume.pdf" download="Resume.pdf" class="btn px-3" style="background-color: #D91CA6">
+              <i class="bi bi-download" id="downloadResume"></i> My Resume</a>
+       <a href="contact.html" class="btn" id="contactInfo" style="background-color: #D91CA6">Contact Information</a>
         </div>
     </div>
 </div>
@@ -92,62 +71,225 @@
     <div class="text-center bg-light" style=" margin-top:50px; margin-bottom: 25px;">
 <span class="border border-3 border-dark" style="font-weight: bold; display: block; font-size: 30px;">Skills</span>
     </div>
-    <div class="container">
+    <!--<div class="container">
     <div class="row">
         <div class="col-md-6">
-            <h3 class="text-center"> <strong>Technical Skills</strong> </h3>
+            <h3 class="text-center"> <strong>Programmming Languages</strong> </h3>
             <h5 class="fs-6">HTML</h5>
-            <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 80%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 80%;"></div>
             </div>
             <h5 class="fs-6">CSS</h5>
-            <div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 60%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar " style="width: 60%; "></div>
             </div>
             <h5 class="fs-6">JavaScript</h5>
-            <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 20%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" >
+                <div class="progress-bar" style="width: 20%;"></div>
             </div>
             <h5 class="fs-6">Bootstrap</h5>
-            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 80%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar"  aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 80%;"></div>
             </div>
             <h5 class="fs-6">C++</h5>
-            <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 70%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar"  aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 70%; "></div>
             </div>
             <h5 class="fs-6">Java</h5>
-        <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-            <div class="progress-bar progress-bar-striped" style="width: 80%; background-color: palevioletred;"></div>
+        <div class="progress" role="progressbar"  aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 85%;"></div>
+        </div>
+        <h5 class="fs-6">C</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 45%;"></div>
+        </div>
+        <h5 class="fs-6">Python</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 65%;"></div>
+        </div>
+        <h5 class="fs-6">Clojure</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 45%;"></div>
+        </div>
+        <h5 class="fs-6">Erlang</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 20%;"></div>
+        </div>
+        <h5 class="fs-6">Prolog</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 35%;"></div>
+        </div>
+        <h5 class="fs-6">Common LISP</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 25%;"></div>
+        </div>
+        <h5 class="fs-6">MySQL</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 35%;"></div>
+        </div>
+        <h5 class="fs-6">PHP</h5>
+        <div class="progress" role="progressbar"  aria-valuenow="10" aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar" style="width: 10%;"></div>
         </div>
         </div>
+
         <div class="col-md-6">
-            <h3 class="text-center"> <strong>Applications</strong> </h3>
+            <h3 class="text-center"> <strong>Applications and Softwares</strong> </h3>
             <h5 class="fs-6">GitHub</h5>
-            <div class="progress" role="progressbar" aria-label="Default striped example" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 40%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar"  aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 40%;"></div>
             </div>
             <h5 class="fs-6">Notion</h5>
-            <div class="progress" role="progressbar" aria-label="Success striped example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 90%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 90%;"></div>
             </div>
             <h5 class="fs-6">Microsoft (Word, Excel, PowerPoint)</h5>
-            <div class="progress" role="progressbar" aria-label="Info striped example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 80%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 80%; "></div>
             </div>
             <h5 class="fs-6">AutoCAD</h5>
-            <div class="progress" role="progressbar" aria-label="Warning striped example" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 30%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 30%;"></div>
             </div>
             <h5 class="fs-6">Altera Quartus 2</h5>
-            <div class="progress" role="progressbar" aria-label="Danger striped example" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="height:8px;">
-                <div class="progress-bar progress-bar-striped" style="width: 50%; background-color: palevioletred;"></div>
+            <div class="progress" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%;"></div>
+            </div>
+            <h5 class="fs-6">MATLAB</h5>
+            <div class="progress" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 30%;"></div>
+            </div>
+            <h5 class="fs-6">XAMPP</h5>
+            <div class="progress" role="progressbar"  aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                <div class="progress-bar" style="width: 50%;"></div>
             </div>
         </div>
 </div>
+<hr style="margin-top: 40px;" class="border-dark border-black">
+<div class="row">
+  <div class="col-md-12">
+    <h3 class="text-center "> <strong>Other Important skills</strong> </h3>
+
+  </div>
 </div>
+</div>-->
+<div class="container">
+<div class="row">
+  <div class="col-md-6 card">
+    <div id="cardTitle">
+      <h5 class="card-title mt-2">Programming Languages</h5></div>
+      <div class="card-body text-center">
+      <p class="card-text ">
+        <span class="group">
+          <img id="html" src="images/programming_icons/html.png">
+          <img id="css" src="images/programming_icons/css.png">
+          <img id="bootstrap" src="images/programming_icons/bootstrap.png">
+          <img id="sass" src="images/programming_icons/sass.png">
+          <img id="js" src="images/programming_icons/js.png">
+      </span>
+
+        <hr>
+
+        <span class="group1">
+        <img id="java" src="images/programming_icons/java.png">
+        <img id="python" src="images/programming_icons/python.png">
+        <img id="php" src="images/programming_icons/php.png">
+        <img id="cPlusPlus" src="images/programming_icons/cPlusPlus.png">
+        <img id="cLanguage" src="images/programming_icons/c.png">
+      </span>
+<br>
+        <hr>
+
+        <span class="group2">
+        <img id="erlang" src="images/programming_icons/erlang.png">
+        <img id="clojure" src="images/programming_icons/clojure.png">
+        <img id="lisp" src="images/programming_icons/lisp.png">
+        <img id="prolog" src="images/programming_icons/prolog.png">
+      </span>
+<br>
+        <hr>
+<span style="line-height:3em;">
+  <img id="mySQL" src="images/programming_icons/mysql.png">
+</span>
+        
+      </p>
+    </div>
+  </div>
+  
+  <div class="col-md-6 card">
+    <div id="cardTitle">
+      <h5 class="card-title mt-2">Softwares & more</h5></div>
+      <div class="card-body text-center">
+      <p class="card-text">
+        <span class="group3">
+          <img id="autocad" src="images/app_icons/autocad.png">
+          <img id="quartus" src="images/app_icons/quartus.png">
+          <img id="pspice" src="images/app_icons/pspice.png">
+          <img id="matlab" src="images/app_icons/matlab.png">
+          <img id="octave" src="images/app_icons/octave.png">
+        </span>
+
+        <hr>
+
+        <span class="group4">
+          <img id="gitbash" src="images/app_icons/gitbash.png">
+          <img id="github" src="images/app_icons/github.png">
+          <img id="sonarcloud" src="images/app_icons/sonarcloud.png">
+        </span>
+        <hr>
+
+        <span class="group5">
+          <img id="ubuntu" src="images/app_icons/ubuntu.png">
+          <img id="xampp" src="images/app_icons/xampp.png">
+          <img id="vscode" src="images/app_icons/vscode.png">
+        </span>
+        <hr>
+
+        <span class="group6">
+          <img id="trello" src="images/app_icons/trello.png">
+          <img id="notion" src="images/app_icons/notion.png">
+        </span>
+      </p>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-md-12">
+    
+  </div>
+</div>
+<div class="container"  style="background-color: #D91CA6; opacity: 0.3; color: black; font-weight: bold;"  >
+<h4>Some Honorable mentions:</h4><br> 
+-Worked using SCRUM framework of Agile methodology <br>
+-Familiar with some architectural patterns: MVC, layered, repository, client-server, pipe-and-filter, lambda
+-Familiar with some design patterns from each of the 3 categories: <br>
+<h5>creational:</h5> 
+-Factory<br>
+-Abstract Factory<br> <br>
+<h5>Behavioral:</h5>
+-Observer <br>
+-Strategy<br>
+-Template <br> <br>
+<h5>Structural:</h5> 
+-Adaptor<br>
+-Decorator <br>
+<br>
+-Familiar with UMLs, use-case diagrams, state diagrams, class diagrams, 
+
+</div>
+</div>
+
+
+
+
 </section>
 
+<!--Projects-->
+<section id="projects" class="py-2">
+  <div class="text-center bg-light" style=" margin-top:50px; margin-bottom: 25px;">
+      <span class="border border-3 border-dark" style="font-weight: bold; display: block; font-size: 30px;">Projects</span>
+  </div>
+  </section>
 
 <!-- Education -->
 <section id="education" class="py-2">
@@ -234,17 +376,12 @@
 </div>
 </section>
 
-<!--projects-->
-<section id="project" class="py-2">
-    <div class="text-center bg-light" style=" margin-top:50px; margin-bottom: 25px;">
-        <span class="border border-3 border-dark" style="font-weight: bold; display: block; font-size: 30px;">Projects</span>
-    </div>
-    </section>
+
 
 
 
 <!--Volunteering-->
-    <section id="volunteer" class="py-2">
+    <section id="volunteering" class="py-2">
         <div class="text-center bg-light" style=" margin-top:50px; margin-bottom: 25px;">
             <span class="border border-3 border-dark" style="font-weight: bold; display: block; font-size:30px;">Volunteering Experience</span>
         </div>
@@ -289,9 +426,10 @@
 <section id="contact" class="py-2">
 </section>
 
+<!--Footer-->
+<div id="footerContainer"></div>
 
 <!--JavaScript Files-->
-<script src="js/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>
