@@ -243,6 +243,29 @@ a {
     }
     
 }
+
+/*Projects*/
+.projectTitle {
+    font-weight: bold;
+    background-color: #D91CA6;
+    text-align: center;
+    border-radius: 10px;
+}
+.carousel-image {
+    height:40vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+   
+}
+.bg-img-2 {
+    justify-content: center;
+    align-items: center;
+    margin-left: 130px;
+    margin-top:10px;
+
+}
 /*Footer*/
 footer {
     background-color: black;
